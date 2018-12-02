@@ -1,0 +1,25 @@
+<?php
+
+   $fr = file_get_contents("input3.txt");        
+
+    $x = 0;
+    $y = 0;
+
+    $turn[$x.$y] = 1;
+
+    for($i = 0; $i < strlen($fr); $i++)
+    {
+        $char = substr($fr, $i, 1);
+        if ($char == "^") { $y++; } 
+        else if ($char == "v") { $y--; } 
+        else if ($char == "<") { $x--; } 
+        else if ($char == ">") { $x++; } 
+        else { echo " - "; }
+
+    if ($turn[$x.$y]=0) { $turn[$x.$y]=1; }           
+    else { $turn[$x.$y]++; }
+    }
+
+    echo count($turn)." haz kapott legalabb egy ajandekot.";
+        
+?>
