@@ -1,0 +1,22 @@
+Advent of Code day1 - 01
+
+<?php
+
+    $fr = file_get_contents("input1.txt");
+    $x = 1;
+
+    for ($i = 0; $i < strlen($fr); $i++)
+    {
+    
+        $repl = substr($fr, $i, 1);
+        if ($repl == "(") { $x++; }
+        else { $x--; }
+        if ($x == -1) 
+        
+    { 
+        echo "Pozicio: ".($i); 
+        break;            
+    }
+    }
+    
+?>
