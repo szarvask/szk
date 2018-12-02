@@ -1,0 +1,18 @@
+<?php
+
+  $fr = "bgvyzdsv";
+
+  $x = 0;
+  $answ = false;
+
+  do {
+      $md  = md5($fr.$x);
+
+      if (substr($md, 0, 6)==="000000") {$answ = $x;}
+      else $x++;
+
+  } while ($answ==false);
+
+  echo $answ;
+        
+?>
