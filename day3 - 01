@@ -1,6 +1,8 @@
 <?php
 
-   $file = file_get_contents("input3.txt");        
+   //Advent of Code - 2015 Day 3 - 01
+
+    $file = file_get_contents("input3.txt");        
 
     $x = 0;
     $y = 0;
