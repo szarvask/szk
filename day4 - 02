@@ -1,15 +1,24 @@
 <?php
 
-  $fr = "bgvyzdsv";
+  //Advent of Code 2015 day 4 - 02
+
+  $input = "bgvyzdsv";
 
   $x = 0;
   $answ = false;
 
   do {
-      $md  = md5($fr.$x);
+  
+      $md  = md5($input.$x);
 
-      if (substr($md, 0, 6)==="000000") {$answ = $x;}
-      else $x++;
+      if (substr($md, 0, 6)==="000000") 
+      {
+        $answ = $x;
+      }
+      else 
+      {
+        $x++;
+      }
 
   } while ($answ==false);
 
