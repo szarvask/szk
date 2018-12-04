@@ -1,22 +1,33 @@
-Advent of Code day1 - 02
-
 <?php
 
-    $fr = file_get_contents("input1.txt");
+    //Advent of Code 2015 day 1 - 02
+
+    $file = file_get_contents("input1.txt");
     $x = 1;
 
-    for ($i = 0; $i < strlen($fr); $i++)
+    for ($i = 0; $i < strlen($file); $i++)
     {
     
-        $repl = substr($fr, $i, 1);
-        if ($repl == "(") { $x++; }
-        else { $x--; }
-        if ($x == -1) 
+        $char = substr($file, $i, 1);
         
-    { 
-        echo "Pozicio: ".($i); 
-        break;            
-    }
+        if ($char == "(") 
+        { 
+            $x++; 
+        }
+        else if ($char == ")")
+        { 
+            $x--; 
+        }
+        else
+        {
+            echo "Unknown character!";
+        }
+        
+        if ($x == -1)         
+        { 
+            echo "Pozicio: ".($i); 
+            break;            
+        }
     }
     
 ?>
