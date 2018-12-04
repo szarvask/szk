@@ -1,23 +1,26 @@
 <?php
 
+    //Advent of Code 2015 day 2 - 01
+    
     $fr = file("input2.txt");
         
     $sqr = 0;
 
-    foreach ($fr as $value) {
-        $pos = explode('x', $value);
+    foreach ($fr as $value) 
+        {
+            $pos = explode('x', $value);
 
-        $l = intval($pos[0]);
-        $w = intval($pos[1]);
-        $h = intval($pos[2]);
+            $l = intval($pos[0]);
+            $w = intval($pos[1]);
+            $h = intval($pos[2]);
 
-        $sqr += 2*$l*$w + 2*$w*$h + 2*$h*$l;
+            $sqr += 2*$l*$w + 2*$w*$h + 2*$h*$l;
 
-        $sort = array($l, $w, $h);
-        sort($sort);
-        
-        $sqr += $sort[0]*$sort[1];
-    }
+            $sort = array($l, $w, $h);
+            sort($sort);
+
+            $sqr += $sort[0]*$sort[1];
+        }
         
     echo $sqr;
         
