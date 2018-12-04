@@ -1,6 +1,6 @@
 <?php
 
-  //Advent of Code 2015 day 4 - 02
+  //Advent of Code 2015 Day 4 - 02
 
   $input = "bgvyzdsv";
 
@@ -22,6 +22,6 @@
 
   } while ($answ==false);
 
-  echo $answ;
+  echo "The answer: ".$answ;
         
 ?>
