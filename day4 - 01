@@ -1,5 +1,7 @@
 <?php
 
+  //Advent of Code 2015 day 4 - 01
+
   $input = "bgvyzdsv";
 
   $x = 0;
