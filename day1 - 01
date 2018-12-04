@@ -1,18 +1,21 @@
-Advent of Code Day 1 - 01
-
 <?php
+  //Advent of Code Day 1 - 01
   
   $fr = file_get_contents("input1.txt"); 
         
   $x = 0; 
 
   for($i = 0; $i < strlen($fr); $i++)
-  
-  {
-  $repl = substr($fr, $i, 1);
-  if ($repl == '(') { $x++; } 
-  else { $x--; }
-  }
+    {
+      $repl = substr($fr, $i, 1);
+      if ($repl == '(')
+      { 
+        $x++; 
+      } 
+      else {
+        $x--; 
+      }
+    }
 
   echo "Eredmeny: " . $x;
         
