@@ -1,0 +1,26 @@
+<?php
+
+  //Advent of Code 2015 day 2 - 02
+  
+  $file = file("input2.txt");
+        
+    $feet = 0;
+        
+        foreach ($file as $value) 
+        {
+            $pos = explode('x', $value);
+            
+            $l = intval($pos[0]);
+            $w = intval($pos[1]);
+            $h = intval($pos[2]);
+            
+            $sort = array($l, $w, $h);
+            sort($sort);
+            
+            $feet += 2*$sort[0] + 2*$sort[1];
+            $feet += $sort[0]*$sort[1]*$sort[2];
+        }
+        
+        echo $feet; 
+        
+?>
