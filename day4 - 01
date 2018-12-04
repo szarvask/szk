@@ -1,15 +1,23 @@
 <?php
 
-  $fr = "bgvyzdsv";
+  $input = "bgvyzdsv";
 
   $x = 0;
+  
   $answ = false;
 
   do {
-      $md  = md5($fr.$x);
+  
+      $md  = md5($input.$x);
 
-      if (substr($md, 0, 5)==="00000") {$answ = $x;}
-      else $x++;
+      if (substr($md, 0, 5)==="00000") 
+      {
+        $answ = $x;
+      }
+      else 
+      {
+        $x++;
+      }
 
   } while ($answ==false);
 
