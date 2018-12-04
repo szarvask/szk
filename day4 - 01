@@ -23,6 +23,6 @@
 
   } while ($answ==false);
 
-  echo $answ;
+  echo "The answer: ".$answ;
 
 ?>
