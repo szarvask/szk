@@ -1,22 +1,29 @@
 <?php
+
   //Advent of Code Day 1 - 01
   
-  $fr = file_get_contents("input1.txt"); 
+  $file = file_get_contents("input1.txt"); 
         
   $x = 0; 
 
-  for($i = 0; $i < strlen($fr); $i++)
+  for($i = 0; $i < strlen($file); $i++)
     {
-      $repl = substr($fr, $i, 1);
-      if ($repl == '(')
+    
+      $char = substr($file, $i, 1);
+      
+      if ($char == '(')
       { 
         $x++; 
       } 
-      else {
+      else if ($char == ')') {
         $x--; 
+      }
+      else
+      {
+        echo "Unknown character!";
       }
     }
 
-  echo "Eredmeny: " . $x;
+  echo "Result " . $x;
         
 ?>
