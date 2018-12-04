@@ -7,7 +7,7 @@
     $x = 0;
     $y = 0;
 
-    $turn[$x.$y] = 1;
+    $turn[$x.','.$y] = 1;
 
     for($i = 0; $i < strlen($file); $i++)
     {
@@ -15,32 +15,32 @@
         
         if ($char == "^") 
            { 
-            $y++; 
+                $y++; 
            } 
         else if ($char == "v") 
            { 
-            $y--; 
+                $y--; 
            } 
         else if ($char == "<") 
            { 
-            $x--; 
+                $x--; 
            } 
         else if ($char == ">") 
            { 
-            $x++; 
+                $x++; 
            } 
         else 
            { 
-            echo "Unknown character!"; 
+                echo "Unknown character!"; 
            }
 
-       if ($turn[$x.$y]=0) 
+       if ($turn[$x.','.$y] = 0) 
           { 
-            $turn[$x.$y]=1; 
+                $turn[$x.','.$y] = 1; 
           }           
        else 
           { 
-            $turn[$x.$y]++; 
+                $turn[$x.','.$y]++; 
           }
        }
 
