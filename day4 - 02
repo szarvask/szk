@@ -11,7 +11,7 @@
   
       $md  = md5($input.$x);
 
-      if (substr($md, 0, 6)==="000000") 
+      if (substr($md, 0, 6) === "000000") 
       {
         $answ = $x;
       }
