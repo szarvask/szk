@@ -33,8 +33,8 @@
            { 
                 echo "Unknown character!"; 
            }
-
-       if ($turn[$x.','.$y] = 0) 
+           
+       if (!isset($turn[$x.','.$y])) 
           { 
                 $turn[$x.','.$y] = 1; 
           }           
