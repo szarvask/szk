@@ -1,13 +1,12 @@
 <?php
 
-    //Advent of Code 2015 day 1 - 02
+    //Advent of Code 2015 Day 1 - 02
 
     $file = file_get_contents("input1.txt");
     $x = 1;
 
     for ($i = 0; $i < strlen($file); $i++)
-    {
-    
+    {   
         $char = substr($file, $i, 1);
         
         if ($char == "(") 
@@ -22,7 +21,6 @@
         {
             echo "Unknown character!";
         }
-        
         if ($x == -1)         
         { 
             echo "Position: ".($i); 
