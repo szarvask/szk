@@ -14,12 +14,12 @@
             $w = intval($pos[1]); //w as width 
             $h = intval($pos[2]); //h as height 
 
-            $sqr += 2*$l*$w + 2*$w*$h + 2*$h*$l;
+            $sqr += 2 * $l * $w + 2 * $w * $h + 2 * $h *$l;
 
-            $sort = array($l, $w, $h);
-            sort($sort);
+            $t = [$l, $w, $h];
+            sort($t);
 
-            $sqr += $sort[0]*$sort[1];
+            $sqr += $t[0] * $t[1];
         }
         
     echo "They should order ".$sqr." feet of wrapping paper.";
