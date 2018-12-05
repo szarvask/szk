@@ -6,20 +6,20 @@
         
     $feet = 0;
         
-        foreach ($file as $value) 
-        {
-            $pos = explode('x', $value);
-            
-            $l = intval($pos[0]); //l as length 
-            $w = intval($pos[1]); //w as width 
-            $h = intval($pos[2]); //h as height 
-            
-            $t = [$l, $w, $h];
-            sort($t);
-            
-            $feet += 2 * $t[0] + 2 * $t[1];
-            $feet += $t[0] * $t[1] * $t[2];
-        }
+    foreach ($file as $value) 
+    {
+        $pos = explode('x', $value);
+
+        $l = intval($pos[0]); //l as length 
+        $w = intval($pos[1]); //w as width 
+        $h = intval($pos[2]); //h as height 
+
+        $t = [$l, $w, $h];
+        sort($t);
+
+        $feet += 2 * $t[0] + 2 * $t[1];
+        $feet += $t[0] * $t[1] * $t[2];
+    }
         
     echo "They should order ".$feet." feet of ribbon."; 
         
