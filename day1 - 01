@@ -8,14 +8,14 @@
 
   for($i = 0; $i < strlen($file); $i++)
     {
-    
       $char = substr($file, $i, 1);
       
       if ($char == '(')
       { 
         $x++; 
       } 
-      else if ($char == ')') {
+      else if ($char == ')') 
+      {
         $x--; 
       }
       else
