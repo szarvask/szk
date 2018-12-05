@@ -18,7 +18,6 @@
       {
         $x++;
       }
-
   } while ($answ == false);
 
   echo "The answer: ".$answ;
