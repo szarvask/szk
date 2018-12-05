@@ -14,13 +14,13 @@
             $w = intval($pos[1]); //w as width 
             $h = intval($pos[2]); //h as height 
             
-            $sort = array($l, $w, $h);
-            sort($sort);
+            $t = [$l, $w, $h];
+            sort($t);
             
-            $feet += 2*$sort[0] + 2*$sort[1];
-            $feet += $sort[0]*$sort[1]*$sort[2];
+            $feet += 2 * $t[0] + 2 * $t[1];
+            $feet += $t[0] * $t[1] * $t[2];
         }
         
-        echo "They should order ".$feet." feet of ribbon."; 
+    echo "They should order ".$feet." feet of ribbon."; 
         
 ?>
