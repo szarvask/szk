@@ -8,11 +8,10 @@
   
   $answ = false;
 
-  do {
-  
+  do {  
       $md  = md5($input.$x);
 
-      if (substr($md, 0, 5)==="00000") 
+      if (substr($md, 0, 5) === "00000") 
       {
         $answ = $x;
       }
@@ -21,7 +20,7 @@
         $x++;
       }
 
-  } while ($answ==false);
+  } while ($answ == false);
 
   echo "The answer: ".$answ;
 
